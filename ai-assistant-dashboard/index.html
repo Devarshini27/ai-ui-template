@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFlow - AI Assistant Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>AIFlow</span>
+        </div>
+
+        <nav class="nav">
+
+            <a href="#" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>◉</span>
+                Conversations
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>✦</span>
+                AI Insights
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>⚡</span>
+                Prompt Library
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>◷</span>
+                History
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <div class="profile">
+                <div class="avatar">D</div>
+                <div>
+                    <strong>Devarshini</strong>
+                    <small>Personal account</small>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="search">
+                <span>⌕</span>
+                <input type="text" placeholder="Search conversations...">
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="themeButton">☾</button>
+                <button class="icon-btn">🔔</button>
+
+                <div class="top-avatar">D</div>
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard -->
+        <section class="content">
+
+            <div class="welcome">
+
+                <div>
+                    <p class="eyebrow">AI ASSISTANT</p>
+                    <h1>Good morning, Devarshini 👋</h1>
+                    <p class="subtitle">
+                        Here's what's happening with your AI workspace today.
+                    </p>
+                </div>
+
+                <button class="new-chat" id="newChatButton">
+                    + New conversation
+                </button>
+
+            </div>
+
+
+            <!-- Stats -->
+            <div class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span>AI Queries</span>
+                        <div class="stat-icon">✦</div>
+                    </div>
+
+                    <h2>128</h2>
+                    <p class="positive">↑ 18.4% <span>vs last week</span></p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span>AI Insights</span>
+                        <div class="stat-icon">◈</div>
+                    </div>
+
+                    <h2>24</h2>
+                    <p class="positive">↑ 12.8% <span>vs last week</span></p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span>Tasks Completed</span>
+                        <div class="stat-icon">✓</div>
+                    </div>
+
+                    <h2>86%</h2>
+                    <p class="positive">↑ 6.2% <span>vs last week</span></p>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <span>Time Saved</span>
+                        <div class="stat-icon">◷</div>
+                    </div>
+
+                    <h2>12.5h</h2>
+                    <p class="positive">↑ 2.4h <span>this week</span></p>
+                </div>
+
+            </div>
+
+
+            <!-- Main Grid -->
+            <div class="dashboard-grid">
+
+                <!-- Activity -->
+                <section class="panel activity-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>AI Activity</h3>
+                            <p>Your AI usage over the past week</p>
+                        </div>
+
+                        <select id="activitySelect">
+                            <option>Last 7 days</option>
+                            <option>Last 30 days</option>
+                        </select>
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-y">
+                            <span>40</span>
+                            <span>30</span>
+                            <span>20</span>
+                            <span>10</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="grid-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:45%"></div>
+                                    <small>Mon</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:65%"></div>
+                                    <small>Tue</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:52%"></div>
+                                    <small>Wed</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:80%"></div>
+                                    <small>Thu</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:70%"></div>
+                                    <small>Fri</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:92%"></div>
+                                    <small>Sat</small>
+                                </div>
+
+                                <div class="bar-container">
+                                    <div class="bar" style="height:76%"></div>
+                                    <small>Sun</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Quick Prompt -->
+                <section class="panel prompt-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h3>Quick Prompt</h3>
+                            <p>Ask your AI assistant</p>
+                        </div>
+
+                        <span class="online">
+                            <span></span>
+                            Online
+                        </span>
+                    </div>
+
+                    <div class="prompt-box">
+
+                        <textarea
+                            id="promptInput"
+                            placeholder="What would you like to know?"
+                        ></textarea>
+
+                        <div class="prompt-footer">
+
+                            <span>AI Assistant</span>
+
+                            <button id="askButton">
+                                Ask AI →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="suggestions">
+
+                        <button class="suggestion">
+                            Summarize my activity
+                        </button>
+
+                        <button class="suggestion">
+                            Analyze my tasks
+                        </button>
+
+                        <button class="suggestion">
+                            Give me ideas
+                        </button>
+
+                    </div>
+
+                    <div id="aiResponse" class="ai-response hidden">
+                        <strong>AI Assistant</strong>
+                        <p id="responseText"></p>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Recent Conversations -->
+            <section class="panel conversations">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Recent Conversations</h3>
+                        <p>Your latest AI interactions</p>
+                    </div>
+
+                    <button class="view-all">View all →</button>
+
+                </div>
+
+
+                <div class="conversation-list">
+
+                    <div class="conversation">
+
+                        <div class="conversation-icon">✦</div>
+
+                        <div class="conversation-info">
+                            <strong>Website project ideas</strong>
+                            <span>Helped generate ideas for a modern web project</span>
+                        </div>
+
+                        <span class="conversation-time">Today, 10:24 AM</span>
+
+                    </div>
+
+
+                    <div class="conversation">
+
+                        <div class="conversation-icon">◈</div>
+
+                        <div class="conversation-info">
+                            <strong>Research summary</strong>
+                            <span>Summarized research notes and key findings</span>
+                        </div>
+
+                        <span class="conversation-time">Today, 9:15 AM</span>
+
+                    </div>
+
+
+                    <div class="conversation">
+
+                        <div class="conversation-icon">⚡</div>
+
+                        <div class="conversation-info">
+                            <strong>JavaScript debugging</strong>
+                            <span>Analyzed and explained a JavaScript issue</span>
+                        </div>
+
+                        <span class="conversation-time">Yesterday</span>
+
+                    </div>
+
+
+                    <div class="conversation">
+
+                        <div class="conversation-icon">✧</div>
+
+                        <div class="conversation-info">
+                            <strong>Presentation outline</strong>
+                            <span>Created an organized presentation structure</span>
+                        </div>
+
+                        <span class="conversation-time">Yesterday</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
